@@ -3,10 +3,11 @@ pipeline {
 
   stages {
     stage('Clone Repo') {
-      steps {
-        git url: 'https://github.com/mith-u/devops-pipeline-app.git'
-      }
-    }
+  steps {
+    git branch: 'main', url: 'https://github.com/mith-u/devops-pipeline-app.git'
+  }
+}
+}
 
     stage('Build with Maven') {
       steps {
